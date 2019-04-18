@@ -1,7 +1,7 @@
 public class PriorityQueue {
     private Heap heap;
     public PriorityQueue(int length){
-        heap = new Heap(length);
+        heap = new Heap(length, true);
     }
     public void enqueue(int item){
         if(heap.length < heap.ls.length){

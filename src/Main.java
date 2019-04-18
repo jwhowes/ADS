@@ -1,13 +1,12 @@
 public class Main {
     public static void main(String[] args){
         int[] ls = {3, 1, 4, 2};
-        mergeSort(ls);
-        for(int i : ls){
+        for(int i : heapSort(ls)){
             System.out.println(i);
         }
     }
     public static int[] heapSort(int[] ls){
-        Heap heap = new Heap(ls);
+        Heap heap = new Heap(ls, true);
         heap.buildHeap();
         while(heap.length > 1){
             int temp  = heap.ls[heap.length - 1];
